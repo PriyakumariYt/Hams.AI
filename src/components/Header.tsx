@@ -31,7 +31,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="flex items-center gap-1.5 font-extrabold text-xl tracking-tight text-neutral-950 focus:outline-none"
         >
           <span>
-            HAMS<span className="text-xs font-semibold text-slate-700">.AI</span>
+            NTS<span className="text-xs font-semibold text-slate-700">.NETWORK</span>
           </span>
           {/* Soundwave mark symbol */}
           <svg

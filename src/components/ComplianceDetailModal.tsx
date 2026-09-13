@@ -33,12 +33,12 @@ export const ComplianceDetailModal: React.FC<ComplianceDetailModalProps> = ({
           </div>
           <div>
             <h2 className="text-xl font-bold text-slate-900">
-              {lang === 'en' ? 'Security & Sovereign Governance' : 'الأمان والحوكمة السيادية'}
+              {lang === 'en' ? 'Engineering Quality & Standards' : 'معايير الجودة والحوكمة الهندسية'}
             </h2>
             <p className="text-xs text-slate-500">
               {lang === 'en'
-                ? 'NCA Certified & Saudi Data Residency'
-                : 'معتمد من الهيئة الوطنية للأمن السيبراني واستضافة داخل المملكة'}
+                ? 'ISO Certified Delivery & Structured Verification'
+                : 'تسليم احترافي معتمد وإجراءات فحص هندسية دقيقة'}
             </p>
           </div>
         </div>
@@ -47,36 +47,36 @@ export const ComplianceDetailModal: React.FC<ComplianceDetailModalProps> = ({
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
             <h4 className="font-bold text-slate-900 flex items-center gap-2 mb-1">
               <Server className="w-4 h-4 text-emerald-600" />
-              <span>{lang === 'en' ? 'Local Data Residency (Saudi Arabia)' : 'استضافة البيانات محلياً (المملكة العربية السعودية)'}</span>
+              <span>{lang === 'en' ? 'Quality Management & Structured Delivery' : 'إدارة الجودة والتسليم المنهجي'}</span>
             </h4>
             <p className="text-xs text-slate-600">
               {lang === 'en'
-                ? 'All call recordings, transcripts, embeddings, and customer PII are securely processed and stored in ISO-certified Tier IV data centers located in Riyadh, Saudi Arabia.'
-                : 'تتم معالجة وتخزين جميع التسجيلات الصوتية والنصوص والبيانات الشخصية للعملاء داخل مراكز بيانات معتمدة من الفئة الرابعة (Tier IV) بالرياض.'}
+                ? 'Every project follows ISO 9001:2015 certified workflows. From the first site survey to final sign-off, we bring clear milestones, open communication, and single-point ownership.'
+                : 'تتبع كافة مشاريعنا مسارات عمل معتمدة وفق ISO 9001:2015، مما يضمن معالم واضحة وتواصلاً شفافاً ومسؤولية كاملة من المعاينة الأولى وحتى التسليم.'}
             </p>
           </div>
 
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
             <h4 className="font-bold text-slate-900 flex items-center gap-2 mb-1">
               <Lock className="w-4 h-4 text-blue-600" />
-              <span>{lang === 'en' ? 'Encryption & Key Management' : 'التشفير وإدارة المفاتيح'}</span>
+              <span>{lang === 'en' ? 'Network Security & Hardened Baseline' : 'أمن الشبكات وحماية البيئة الرقمية'}</span>
             </h4>
             <p className="text-xs text-slate-600">
               {lang === 'en'
-                ? 'End-to-end encryption in transit (TLS 1.3) and at rest (AES-256) with enterprise customer-managed keys (BYOK) support.'
-                : 'تشفير كامل للبيانات أثناء النقل (TLS 1.3) وأثناء التخزين (AES-256) مع دعم مفاتيح التشفير الخاصة بالعميل (BYOK).'}
+                ? 'All network devices, firewalls, and server racks are configured using ISO 27001 aligned security baselines — with encrypted site-to-site VPNs, VLAN isolation, and hardened credentials.'
+                : 'تُضبط أجهزة الشبكات وجدران الحماية وفق أفضل ممارسات أمن المعلومات ISO 27001 مع تشفير قنوات الاتصال وعزل الشبكات الافتراضية وحماية المنافذ.'}
             </p>
           </div>
 
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
             <h4 className="font-bold text-slate-900 flex items-center gap-2 mb-1">
               <FileText className="w-4 h-4 text-purple-600" />
-              <span>{lang === 'en' ? 'PDPL & NCA Essential Controls (ECC)' : 'ضوابط الأمن السيبراني الأساسية (ECC) ونظام PDPL'}</span>
+              <span>{lang === 'en' ? 'Certified Structured Cabling & Handover' : 'اعتماد التمديدات الهيكلية والتوثيق الشامل'}</span>
             </h4>
             <p className="text-xs text-slate-600">
               {lang === 'en'
-                ? 'Full alignment with the National Cybersecurity Authority Essential Cybersecurity Controls (NCA ECC) and Cloud Cybersecurity Controls (CCC).'
-                : 'مطابقة تامة لضوابط الأمن السيبراني الأساسية (ECC) وضوابط الأمن السيبراني للحوسبة السحابية (CCC) الصادرة عن الهيئة الوطنية للأمن السيبراني.'}
+                ? 'All Cat6/Cat6A copper runs and optical fiber backbones undergo Fluke calibration testing. Every project concludes with labeled patch diagrams and full administrative handover.'
+                : 'تخضع كافة كابلات Cat6/Cat6A والألياف البصرية لفحص دقيق ومعايرة بأحدث الأجهزة. يُسلم كل مشروع بمخططات تفصيلية مرقمة للمنافذ وشهادات فحص موثقة.'}
             </p>
           </div>
         </div>

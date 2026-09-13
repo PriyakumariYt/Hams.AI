@@ -55,22 +55,21 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenDemo, onOpenSandbox }) =
           {t.hero.trustedBy}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 opacity-80 grayscale hover:grayscale-0 transition-all duration-300">
-          {/* Tamkeen Tech Logo text mark */}
+          {/* Banking & Financial Services */}
           <div className="flex items-center gap-1.5 font-bold text-sm tracking-tight text-slate-700">
-            <span className="text-orange-500 font-black text-base">❯❮</span> Tamkeen Technologies
+            <span className="text-orange-500 font-black text-base">❯❮</span> Banking & Finance
           </div>
-          {/* SDAIA Partner representation */}
+          {/* Manufacturing & Plants */}
           <div className="flex items-center gap-1.5 font-bold text-xs sm:text-sm text-slate-700">
-            <span className="text-blue-600 font-black">✦</span> SDAIA Partner
+            <span className="text-blue-600 font-black">✦</span> Manufacturing
           </div>
-          {/* Rewaa POS */}
+          {/* Enterprise Retail */}
           <div className="font-bold text-sm sm:text-base tracking-tight text-purple-800 flex items-center gap-1">
-            <span>Rewaa</span>
-            <span className="text-xs text-purple-600 font-semibold">رواء</span>
+            <span>Retail Chains</span>
           </div>
-          {/* Ashley Furniture */}
+          {/* Corporate Workplaces */}
           <div className="font-bold text-sm sm:text-base text-slate-800 tracking-tight">
-            Ashley.
+            Corporate Workplaces
           </div>
         </div>
       </div>

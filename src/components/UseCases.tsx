@@ -17,11 +17,11 @@ export const UseCases: React.FC<UseCasesProps> = ({
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
   const categories = [
-    { id: 'all', label: lang === 'en' ? 'All Operations' : 'كافة العمليات' },
-    { id: 'support', label: lang === 'en' ? 'Support & CSAT' : 'الدعم ورضا العملاء' },
-    { id: 'finance', label: lang === 'en' ? 'Finance & Collections' : 'المالية والتحصيل' },
-    { id: 'operations', label: lang === 'en' ? 'Booking & Operations' : 'الحجوزات والعمليات' },
-    { id: 'sales', label: lang === 'en' ? 'Sales & Leads' : 'المبيعات وتأهيل العملاء' },
+    { id: 'all', label: lang === 'en' ? 'All Industries' : 'كافة القطاعات' },
+    { id: 'finance', label: lang === 'en' ? 'Banking & Finance' : 'الخدمات المصرفية' },
+    { id: 'operations', label: lang === 'en' ? 'Manufacturing & Logistics' : 'التصنيع واللوجستيات' },
+    { id: 'support', label: lang === 'en' ? 'Corporate & Healthcare' : 'المكاتب والرعاية الصحية' },
+    { id: 'sales', label: lang === 'en' ? 'Retail & Digital' : 'التجزئة والحلول الرقمية' },
   ];
 
   const filteredCases =
@@ -140,7 +140,7 @@ export const UseCases: React.FC<UseCasesProps> = ({
 
             <div className="mt-4 p-3.5 bg-slate-50 rounded-xl border border-slate-200">
               <span className="text-[11px] font-bold text-slate-700 block mb-1">
-                {lang === 'en' ? 'Real Customer Voice / Chat Prompt:' : 'نص المحادثة الافتراضي للوكيل:'}
+                {lang === 'en' ? 'Sample Project Requirement / Scope:' : 'مثال على متطلبات ونطاق المشروع:'}
               </span>
               <p className="text-xs text-slate-800 italic font-medium leading-relaxed">
                 {selectedCase.samplePrompt[lang]}
@@ -149,7 +149,7 @@ export const UseCases: React.FC<UseCasesProps> = ({
 
             <div className="mt-4 flex flex-wrap items-center gap-2">
               <span className="text-xs font-semibold text-slate-500">
-                {lang === 'en' ? 'Supported Channels:' : 'القنوات المدعومة:'}
+                {lang === 'en' ? 'Key Technical Components:' : 'المكونات الفنية الرئيسية:'}
               </span>
               {selectedCase.channels.map((ch) => (
                 <span
@@ -171,7 +171,7 @@ export const UseCases: React.FC<UseCasesProps> = ({
                 className="flex-1 bg-black text-white text-xs font-bold py-3 rounded-xl shadow hover:bg-neutral-800 transition flex items-center justify-center gap-1.5"
               >
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>{lang === 'en' ? 'Test This Use Case Live' : 'تجربة هذا السيناريو حياً'}</span>
+                <span>{lang === 'en' ? 'Scope This Project Live' : 'استعراض نطاق المشروع تفاعلياً'}</span>
               </button>
               <button
                 onClick={() => setSelectedCase(null)}

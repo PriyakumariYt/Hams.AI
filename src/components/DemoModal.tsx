@@ -15,8 +15,8 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, lang }) =
     email: '',
     phone: '',
     company: '',
-    volume: '50k-250k',
-    channels: ['Voice', 'WhatsApp'],
+    volume: 'medium',
+    channels: ['Network Infrastructure', 'Enterprise Wireless'],
     preferredTime: 'morning',
   });
 
@@ -56,15 +56,15 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, lang }) =
           <div>
             <div className="mb-6">
               <span className="text-[11px] font-bold text-blue-600 uppercase tracking-wider">
-                {lang === 'en' ? 'Enterprise Consultation' : 'استشارة مؤسسية مخصصة'}
+                {lang === 'en' ? 'Project Consultation' : 'استشارة فنية لمشروعك'}
               </span>
               <h2 className="text-2xl font-bold text-slate-900 mt-1">
-                {lang === 'en' ? 'Book a Hams.AI Demo' : 'حجز عرض توضيحي لمنصة همس'}
+                {lang === 'en' ? 'Discuss Your Project' : 'ناقش مشروعك مع NTS Network'}
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 mt-1.5 leading-relaxed">
                 {lang === 'en'
-                  ? 'Experience live Saudi Arabic voice agents and discover how much operational cost your organization will save.'
-                  : 'شاهد الوكلاء الصوتيين باللهجة السعودية حياً واكتشف حجم التكاليف التشغيلية التي ستوفرها لمنشأتك.'}
+                  ? 'Tell us what you have in mind — network infrastructure, enterprise WiFi, CCTV, structured cabling, or custom web & mobile apps.'
+                  : 'أخبرنا باحتياجات منشأتك — البنية التحتية، شبكات الواي فاي، المراقبة، التمديدات الهيكلية، أو تطوير البرمجيات والتطبيقات.'}
               </p>
             </div>
 
@@ -76,7 +76,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, lang }) =
                 <input
                   type="text"
                   required
-                  placeholder={lang === 'en' ? 'e.g. Faisal Al-Otaibi' : 'مثال: فيصل العتيبي'}
+                  placeholder={lang === 'en' ? 'e.g. Rahul Verma' : 'الاسم الكريم'}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-black"
@@ -99,12 +99,12 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, lang }) =
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 mb-1">
-                    {lang === 'en' ? 'Phone (KSA / Gulf)' : 'رقم الجوال'} *
+                    {lang === 'en' ? 'Phone Number' : 'رقم الهاتف'} *
                   </label>
                   <input
                     type="tel"
                     required
-                    placeholder="+966 5x xxx xxxx"
+                    placeholder="+91 xxxxx xxxxx"
                     dir="ltr"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -115,12 +115,12 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, lang }) =
 
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  {lang === 'en' ? 'Company / Government Entity' : 'اسم المنشأة أو الجهة الحكومية'} *
+                  {lang === 'en' ? 'Company / Organization' : 'اسم المنشأة أو الشركة'} *
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder={lang === 'en' ? 'e.g. Ministry of Health, STC, Retail Group' : 'مثال: جهة حكومية، بنك، شركة تجزئة'}
+                  placeholder={lang === 'en' ? 'e.g. Enterprise Retail Group, Industrial Corp' : 'مثال: شركة تجارية، مصنع، بنك'}
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-black"
@@ -129,28 +129,35 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, lang }) =
 
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-                  {lang === 'en' ? 'Channels Required' : 'القنوات المستهدفة'}
+                  {lang === 'en' ? 'Services Required' : 'الخدمات والحلول المطلوبة'}
                 </label>
                 <div className="flex flex-wrap gap-2">
-                  {['Voice Inbound/Outbound', 'WhatsApp Business', 'Web Chat', 'Cloud Contact Center', 'Social Listening'].map(
-                    (channel) => {
-                      const selected = formData.channels.includes(channel);
-                      return (
-                        <button
-                          type="button"
-                          key={channel}
-                          onClick={() => toggleChannel(channel)}
-                          className={`text-xs px-3 py-1.5 rounded-lg border font-medium transition ${
-                            selected
-                              ? 'bg-black text-white border-black'
-                              : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
-                          }`}
-                        >
-                          {channel}
-                        </button>
-                      );
-                    }
-                  )}
+                  {[
+                    'Network Infrastructure',
+                    'Enterprise Wireless',
+                    'CCTV & Surveillance',
+                    'Structured Cabling',
+                    'Workplace Tech',
+                    'Web & Mobile Apps',
+                    'Custom Software',
+                    'Multi-Site Rollout',
+                  ].map((channel) => {
+                    const selected = formData.channels.includes(channel);
+                    return (
+                      <button
+                        type="button"
+                        key={channel}
+                        onClick={() => toggleChannel(channel)}
+                        className={`text-xs px-3 py-1.5 rounded-lg border font-medium transition ${
+                          selected
+                            ? 'bg-black text-white border-black'
+                            : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                        }`}
+                      >
+                        {channel}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -159,18 +166,16 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, lang }) =
                   type="submit"
                   className="w-full bg-black text-white text-sm font-bold py-3.5 rounded-xl shadow-md hover:bg-neutral-800 transition"
                 >
-                  {lang === 'en' ? 'Confirm Demo Request' : 'تأكيد طلب العرض التوضيحي'}
+                  {lang === 'en' ? 'Confirm Consultation Request' : 'تأكيد طلب الاستشارة'}
                 </button>
               </div>
 
               <div className="text-center pt-1">
                 <a
-                  href="https://form.asana.com/?k=8X--BtWqSWONj2cooRnwXA&d=1210838775195077"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="mailto:info@ntsnetwork.in"
                   className="inline-flex items-center gap-1 text-[11px] text-slate-500 hover:text-black"
                 >
-                  <span>{lang === 'en' ? 'Or open official Asana scheduling form' : 'أو افتح نموذج أسانا الرسمي'}</span>
+                  <span>{lang === 'en' ? 'Prefer email? Write directly to info@ntsnetwork.in' : 'تفضل البريد الإلكتروني؟ تواصل مباشرة عبر info@ntsnetwork.in'}</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
@@ -182,21 +187,21 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, lang }) =
               <CheckCircle className="w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">
-              {lang === 'en' ? 'Demo Scheduled Successfully!' : 'تم تأكيد موعد العرض بنجاح!'}
+              {lang === 'en' ? 'Consultation Request Received!' : 'تم استلام طلب الاستشارة بنجاح!'}
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-2 max-w-sm mx-auto leading-relaxed">
               {lang === 'en'
-                ? `Thank you ${formData.name}. Our enterprise team will contact you at ${formData.email} and ${formData.phone} to present a live pilot demonstration for ${formData.company}.`
-                : `شكراً لك ${formData.name}. سيتواصل معك مستشار حلول همس عبر البريد ${formData.email} ورقم الجوال ${formData.phone} لتقديم عرض حي مخصص لمنشأة ${formData.company}.`}
+                ? `Thank you ${formData.name}. The NTS Network engineering team will contact you at ${formData.email} and ${formData.phone} to discuss technical requirements for ${formData.company}.`
+                : `شكراً لك ${formData.name}. سيتواصل معك الفريق الهندسي لشركة NTS عبر البريد ${formData.email} ورقم الهاتف ${formData.phone} لمناقشة المتطلبات الفنية لمنشأة ${formData.company}.`}
             </p>
 
             <div className="mt-6 p-4 bg-slate-50 rounded-2xl border border-slate-200 text-start text-xs space-y-1.5 text-slate-700">
               <div className="font-semibold text-slate-900 mb-1">
-                {lang === 'en' ? 'Meeting Overview:' : 'ملخص الجلسة:'}
+                {lang === 'en' ? 'Next Steps Overview:' : 'الخطوات القادمة:'}
               </div>
-              <p>• {lang === 'en' ? 'Duration: 30 minutes via Google Meet' : 'المدة: 30 دقيقة عبر Google Meet'}</p>
-              <p>• {lang === 'en' ? 'Channels:' : 'القنوات:'} {formData.channels.join(', ')}</p>
-              <p>• {lang === 'en' ? 'KSA Sovereign Cloud & PDPL compliance audit included' : 'شامل تقرير التوافق مع نظام حماية البيانات السعودي'}</p>
+              <p>• {lang === 'en' ? 'Initial Technical Discovery Consultation' : 'جلسة استكشاف فني ومناقشة المتطلبات'}</p>
+              <p>• {lang === 'en' ? 'Services:' : 'الخدمات المطلوبة:'} {formData.channels.join(', ')}</p>
+              <p>• {lang === 'en' ? 'Site assessment & tailored engineering proposal' : 'معاينة الموقع وتقديم عرض فني وهندسي مفصل'}</p>
             </div>
 
             <button

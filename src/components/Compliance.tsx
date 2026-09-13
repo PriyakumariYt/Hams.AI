@@ -20,7 +20,7 @@ export const Compliance: React.FC<ComplianceProps> = ({
         <div className="mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-1.5 text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">
             <ShieldCheck className="w-4 h-4" />
-            <span>NCA & KSA Sovereign Compliance</span>
+            <span>{lang === 'en' ? 'Engineering Excellence & Quality Standards' : 'معايير الجودة والاعتماد الهندسي'}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950 leading-snug">
             {t.title}

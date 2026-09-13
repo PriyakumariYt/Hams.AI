@@ -25,7 +25,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ lang, onOpenDemo }) 
           <div>
             <div className="flex items-center gap-3.5 mb-5">
               <div className="w-11 h-11 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-xs">
-                MA
+                RS
               </div>
               <div>
                 <h3 className="text-sm sm:text-base font-bold text-slate-900">
@@ -63,16 +63,16 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ lang, onOpenDemo }) 
         {/* Client Logo Matrix */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 sm:mt-6">
           <div className="border border-slate-200 rounded-xl p-3.5 flex items-center justify-center bg-white text-xs font-bold text-slate-700 shadow-2xs hover:border-slate-300 transition">
-            Tamkeen Technologies
+            Banking & Finance
           </div>
           <div className="border border-slate-200 rounded-xl p-3.5 flex items-center justify-center bg-white text-xs font-bold text-slate-700 shadow-2xs hover:border-slate-300 transition">
-            Ashley Furniture
+            Manufacturing Plants
           </div>
           <div className="border border-slate-200 rounded-xl p-3.5 flex items-center justify-center bg-white text-xs font-bold text-slate-700 shadow-2xs hover:border-slate-300 transition">
-            SDAIA Ecosystem
+            Retail Chains
           </div>
           <div className="border border-slate-200 rounded-xl p-3.5 flex items-center justify-center bg-white text-xs font-bold text-slate-700 shadow-2xs hover:border-slate-300 transition">
-            Rewaa POS
+            Corporate Parks
           </div>
         </div>
 

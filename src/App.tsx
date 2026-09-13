@@ -80,14 +80,14 @@ export default function App() {
           lang={lang}
           onOpenSandbox={(id) => {
             const prompt =
-              id === 'voice-chat'
+              id === 'enterprise-wifi'
                 ? lang === 'en'
-                  ? 'Can you explain the difference between your Najdi and Gulf dialect voice engines?'
-                  : 'هل تدعمون اللهجة النجدية والحجازية في المكالمات المباشرة؟'
-                : id === 'social-listening'
+                  ? 'How do you prevent dead zones in high-density office buildings and warehouses?'
+                  : 'كيف تضمنون تغطية لاسلكية بدون نقاط ميتة في المكاتب والمستودعات؟'
+                : id === 'software-dev'
                 ? lang === 'en'
-                  ? 'How does Hams detect negative brand mentions on Twitter/X in Saudi Arabia?'
-                  : 'كيف يرصد نظام همس التغريدات وشكاوى العملاء على منصة إكس؟'
+                  ? 'Can you develop a custom web application and mobile app with API integrations?'
+                  : 'هل يمكنكم تطوير تطبيق ويب وجوال مخصص مع ربط واجهات برمجة التطبيقات؟'
                 : undefined;
             openSandbox(prompt);
           }}

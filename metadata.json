@@ -1,6 +1,6 @@
 {
-  "name": "Hams.AI - GenAI Customer Platform",
-  "description": "One AI platform for every customer conversation across voice, chat, WhatsApp, and contact center.",
+  "name": "NTS Network Solutions",
+  "description": "Your infrastructure and development partner. Websites, mobile apps, custom software, and connected workplaces — from idea to delivery.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

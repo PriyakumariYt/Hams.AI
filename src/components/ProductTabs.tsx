@@ -14,7 +14,9 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
   onOpenSandbox,
   onOpenDemo,
 }) => {
-  const [activeTabId, setActiveTabId] = useState<string>('copilot');
+  const [activeTabId, setActiveTabId] = useState<string>(
+    productsData[0]?.id || 'network-infra'
+  );
 
   const activeProduct =
     productsData.find((p) => p.id === activeTabId) || productsData[0];
@@ -85,7 +87,7 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
               onClick={onOpenDemo}
               className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-black text-white text-xs sm:text-sm font-semibold rounded-xl shadow-xs hover:bg-neutral-800 transition gap-2"
             >
-              <span>{lang === 'en' ? 'Learn More & Book Demo' : 'معرفة المزيد وطلب عرض'}</span>
+              <span>{lang === 'en' ? 'Discuss This Solution' : 'ناقش هذا الحل معنا'}</span>
               <ArrowRight className={`w-4 h-4 ${lang === 'ar' ? 'rotate-180' : ''}`} />
             </button>
             <button
@@ -93,7 +95,7 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
               className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-3 bg-white text-slate-800 border border-slate-200 text-xs sm:text-sm font-semibold rounded-xl hover:bg-slate-50 transition gap-2"
             >
               <Radio className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
-              <span>{lang === 'en' ? 'Simulate Agent Interaction' : 'محاكاة تفاعل الوكيل الذكي'}</span>
+              <span>{lang === 'en' ? 'Interactive Solution Assistant' : 'المساعد التفاعلي للحلول'}</span>
             </button>
           </div>
 
@@ -102,7 +104,7 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
             <div className="text-[11px] font-semibold text-slate-400 mb-2 px-1 flex items-center justify-between">
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-                <span>{lang === 'en' ? 'Live Conversation Context & Multi-Agent Telemetry' : 'سياق المحادثة المباشر وسجل الوكلاء'}</span>
+                <span>{lang === 'en' ? 'Enterprise Infrastructure & Deployment Telemetry' : 'بيانات البنية التحتية والتشغيل المباشر'}</span>
               </span>
               <span className="text-emerald-600 font-medium flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
@@ -123,7 +125,7 @@ export const ProductTabs: React.FC<ProductTabsProps> = ({
                   onClick={() => onOpenSandbox(activeProduct.id)}
                   className="bg-white/95 text-black px-4 py-2 rounded-lg text-xs font-bold shadow hover:bg-white transition"
                 >
-                  {lang === 'en' ? 'Open Interactive Inspector →' : 'فتح المعاينة التفاعلية ←'}
+                  {lang === 'en' ? 'Explore Capability Overview →' : 'استعراض تفاصيل القدرات ←'}
                 </button>
               </div>
             </div>

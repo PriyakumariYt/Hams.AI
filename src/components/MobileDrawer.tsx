@@ -52,9 +52,9 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
               onClick={onClose}
               className="flex items-center gap-1.5 font-black text-xl tracking-tight text-neutral-950"
             >
-              HAMS
+              NTS
               <span className="inline-block text-sm font-semibold tracking-normal text-slate-700">
-                .AI
+                .NETWORK
               </span>
               <svg
                 className="w-4 h-4 ml-0.5 text-black inline-block"
@@ -116,9 +116,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
               {t.nav.company}
             </a>
             <a
-              href="https://app.hams.ai"
-              target="_blank"
-              rel="noreferrer"
+              href="mailto:info@ntsnetwork.in"
               className="text-blue-600 font-medium pt-2"
             >
               {t.nav.signIn}
