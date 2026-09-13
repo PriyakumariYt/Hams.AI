@@ -1,0 +1,6 @@
+{
+  "name": "Hams.AI - GenAI Customer Platform",
+  "description": "One AI platform for every customer conversation across voice, chat, WhatsApp, and contact center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
